@@ -2,36 +2,22 @@
 
 int main (){
 
-int x ; 
+    int x;  // Kullanıcının girdiği değeri tutacak değişken
 
-printf("bir değer girin : ") ; scanf("%d",&x) ;  printf("\n") ;
+    printf("Bir değer girin: "); 
+    scanf("%d", &x);  // Kullanıcıdan bir değer alır
+    printf("\n");
 
+    // Dış döngü: Satır sayısını kontrol eder
+    for(int j = 1; j <= x; j++) {
 
-for(int j =1 ; j<=x ; j++) {
+        // İç döngü: Sütun sayısını kontrol eder
+        for(int i = 1; i <= x; i++) {
+            printf("*");  // Yıldız karakterini yazdırır
+        }
 
-for(int i =1;i<=x ;i++ )
-{
+        printf("\n");  // Bir satır tamamlandıktan sonra bir alt satıra geçer
+    }
 
-printf("*") ; 
-
-
-
-}
-printf("\n") ; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return 0 ; 
+    return 0;
 }

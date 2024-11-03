@@ -1,36 +1,26 @@
 #include <stdio.h>
 
+int main() {
+    int x;  // Kullanıcıdan alınan değeri tutacak değişken
+  
 
-int main(){
- 
+    printf("Bir sayı girin: ");
+    scanf("%d", &x);  // Kullanıcıdan bir tam sayı alır
+    printf("\n");
 
- int x ; 
-int num =1 ; 
- printf("bir sayı girin : ") ; scanf("%d",&x) ; printf("\n");
-
- for(int i =1 ; i<=x; i++){
-
-for(int j=1 ;j<=i ; j++){
-    if(j%2==1){
-        printf("1") ; 
+    // Dış döngü: Satır sayısını kontrol eder
+    for (int i = 1; i <= x; i++) {
+        // İç döngü: Her satırda 'i' kadar değer yazdırır
+        for (int j = 1; j <= i; j++) {
+            if (j % 2 == 1) {  // Eğer j tek sayı ise
+                printf("1");  // '1' yazdırır
+            }
+            if (j % 2 == 0) {  // Eğer j çift sayı ise
+                printf("0");  // '0' yazdırır
+            }
+        }
+        printf("\n");  // Bir satır tamamlandıktan sonra alt satıra geçer
     }
-if(j%2==0){
- printf("0") ; 
-}
-}
 
-
-printf("\n") ;
-
- }
-
-
-
-
-
-
-
-
-
-
+    return 0; 
 }
